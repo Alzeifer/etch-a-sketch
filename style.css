@@ -1,0 +1,38 @@
+body{
+    display: flex;
+   justify-content: center;
+   flex-direction: column;
+
+}
+
+button{
+    width: 100px;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 96, 33);
+    border-radius: 5px;
+    border-color: rgb(123, 190, 253);
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.container{
+    display: felx;
+    align-items: center;
+    border: 1px solid rgb(255, 0, 0);
+    width: 800px;
+    height: 800px;
+    flex: 1;
+
+
+
+}
+.square{
+    transition: 0.4s ease;
+}
+.square:hover{
+    background-color: darkblue;
+}
