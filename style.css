@@ -25,7 +25,8 @@ button{
     flex-wrap: wrap;
     width: 800px;
     height: 800px;
-
+    border: 1px solid rgb(255, 145, 0);
+   
 
 
 }
@@ -33,9 +34,9 @@ button{
     transition: 0.4s ease;
     box-sizing: border-box;
     border: 1px solid rgb(255, 136, 39);
-    opacity: 1;
+
 }
 .square:hover{
     background-color: darkblue;
-    opacity: 0.5;
+
 }

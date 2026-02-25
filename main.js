@@ -35,7 +35,7 @@ function createGrid(size){
         container.append(box);
 
     
-    box.style.opacity = 0;
+    box.style.opacity = 0.2;
     
     box.addEventListener("mouseenter", () => {
         box.style.backgroundColor = randomColor();
