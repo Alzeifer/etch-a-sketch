@@ -31,11 +31,19 @@ function createGrid(size){
         box.classList.add(`square`);
         box.style.width = `${flex}%`
         box.style.height = `${flex}%`
-        box.style.backgroundColor = "rgb(44, 132, 173)"
+        box.style.backgroundColor = "rgb(44, 132, 173)";
         container.append(box);
+
     
-    box.addEventListener("mouseover", () => {
+    box.style.opacity = 0;
+    
+    box.addEventListener("mouseenter", () => {
         box.style.backgroundColor = randomColor();
+        let opacity = Number(box.style.opacity);
+
+        if (opacity < 1){
+            box.style.opacity = opacity + 0.1;
+        }
 
         function randomColor(){
             const red =  Math.floor(Math.random() * 256);
@@ -43,9 +51,9 @@ function createGrid(size){
             const blue = Math.floor(Math.random() * 256);
 
             return `rgb(${red} ${green} ${blue})`;
-        }
-    })
-}
+        };
+        });
+    }
 }
 
 createGrid(16);
