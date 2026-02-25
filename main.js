@@ -2,14 +2,6 @@ const container = document.querySelector(".container");
 const btn = document.querySelector("button");
 const inputSize = document.querySelector("#size");
 
-//const columns = 5;
-
-//for(let i = 1; i <= columns; i++){
- //   const item = document.createElement("div");
-   // item.className = "square";
-    //item.textContent = `Item ${i}`;
-    //container.appendChild(item);
-//}
 
 btn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -32,19 +24,20 @@ btn.addEventListener("click", (e) => {
 
 function createGrid(size){
     const gridSize = size * size;
-    const flex = 100/size
+    const flex = 100/size;
 
-    for(let i = 0; i < gridSize; i++);
+    for(let i = 0; i < gridSize; i++){
     const box = document.createElement("div");
-    box.classList.add("square");
-    box.style.width = `${flex}%`
-    box.style.height = `${flex}%`
-    box.style.backgroundColor = "rgb(0, 0, 0)"
-    container.append(box);
-
+        box.classList.add(`square`);
+        box.style.width = `${flex}%`
+        box.style.height = `${flex}%`
+        box.style.backgroundColor = "rgb(44, 132, 173)"
+        container.append(box);
+    
     box.addEventListener("mouseover", () => {
         box.style.backgroundColor = "rgb(248, 59, 59)";
     })
+}
 }
 
 createGrid(16);
