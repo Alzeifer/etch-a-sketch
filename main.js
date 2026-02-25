@@ -1,20 +1,20 @@
 const container = document.querySelector(".container");
 const btn = document.querySelector("button");
-const inputSize = document.querySelector("#size");
+//const inputSize = document.querySelector("#size");
+
+
 
 
 btn.addEventListener("click", (e) => {
     e.preventDefault();
-    const newSize = inputSize.value;
+
+    let newSize = prompt("put a number between 1 - 100");
 
     if(newSize > 0 && newSize <= 100 ){
-         container.textContent = "";
-        inputSize.value = "";   
-
-
+        container.textContent = ""
         createGrid(newSize);
 
-    } else if(inputSize !== null) {
+    } else if(newSize !== null) {
         alert("the size is invalid! Please enter a number between 1 - 100");  
         
 
